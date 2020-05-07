@@ -3,10 +3,8 @@ version: 2
 jobs:
   build:
     working_directory: ~/Attendance
-
     docker:
       - image: node:12.16.1
-
     steps:
       - checkout
       - run:
@@ -31,7 +29,8 @@ jobs:
           command: ssh-keyscan -p $SSH_PORT $SSH_HOST >> ~/.ssh/known_hosts
       - run:
           name: start deploy
-          command: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "sh ~/Attendance/deploy.sh"
+        #  command: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "sh ~/Attendance/deploy.sh"
+          command: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "echo OK"
 
 workflows:
   version: 2
