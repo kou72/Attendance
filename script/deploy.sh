@@ -12,4 +12,4 @@ git reset --hard origin/master
 
 # start nuxt server
 npm run build
-nohup npm start &
+nohup npm start > ./script/log/nohup.log 2>&1 &

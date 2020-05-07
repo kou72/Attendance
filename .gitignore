@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# nohup log files
+nohup.out
+
