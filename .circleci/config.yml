@@ -29,7 +29,7 @@ jobs:
           command: ssh-keyscan -p $SSH_PORT $SSH_HOST >> ~/.ssh/known_hosts
       - run:
           name: start deploy
-          command: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "sh ~/Attendance/script/deploy.sh"
+          command: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "sh ~/Attendance/.circleci/deploy.sh"
 
 workflows:
   version: 2
